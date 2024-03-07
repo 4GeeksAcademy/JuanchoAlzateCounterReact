@@ -5,7 +5,7 @@ const Simple = () => {
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-            setSecond(prevSecond => prevSecond + 1);
+            setSecond(prevSecond => prevSecond === 100 ? 0 : prevSecond + 1);
         }, 1000);
 
         // Limpia el intervalo cuando el componente se desmonta para evitar fugas de memoria
