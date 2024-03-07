@@ -1,26 +1,33 @@
 import React from "react";
+import Simple from "./Simple";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
-//create your first component
 const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+  return (
+    <div className="text-center">
+      <div className="card text-center">
+        <div className="card-header">CONTADOR SIMPLE CON REACT</div>
+        <div className="card-body" style={{padding:"10px", margin:"20px"}}>
+			<div>
+				<Simple/> 
+			</div>	
+				<h5 className="card-title"> </h5>
+		{/* //////////////// BOTONES //////////////////        */}
+				<a href="#" className="btn btn-primary btnAdd">
+					Incrementar
+				</a>
+				<a href="#" className="btn btn-primary btnDecre">
+					Decrementar
+				</a>
+				<a href="#" className="btn btn-primary btnReset">
+					Reset
+				</a>
+
+        </div>
+        <div className="card-footer text-muted">CONTADOR SIMPLE - JUANCHO ALZATE</div>
+      </div>
+    </div>
+  );
 };
 
 export default Home;
